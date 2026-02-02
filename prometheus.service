@@ -1,0 +1,10 @@
+[Unit]
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/promethus/promethus --config.file=/opt/prometheus/prometheus.yml
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
